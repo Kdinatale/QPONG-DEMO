@@ -1,7 +1,7 @@
 import pygame
 
 from assets.circuit_grid import CircuitGrid
-from assets import globals, ui
+from assets import globals, ui, paddle
 
 pygame.init()
 screen = pygame.display.set_mode((1200, 750))
@@ -11,7 +11,9 @@ clock = pygame.time.Clock()
 def main():
     #initialize the game
     circuit_grid = CircuitGrid(5, globals.FIELD_HEIGHT)
-
+    classical_paddle = paddle.Paddle()
+    moving_sprites = pygame.sprite.Group()
+    moving_sprites.add(classical_paddle)
 
     exit = False
     while not exit:
@@ -32,6 +34,7 @@ def main():
         # draw game section 
         circuit_grid.draw(screen)
         ui.draw_statevector_grid(screen)
+        moving_sprites.draw(screen)
         pygame.display.flip()
 
         # Set the framerate - 60 frame per second game.

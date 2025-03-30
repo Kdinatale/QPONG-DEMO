@@ -1,3 +1,5 @@
+# Set of parameters we are going to use 
+
 # colors
 WHITE = 255, 255, 255
 BLACK = 0, 0, 0
