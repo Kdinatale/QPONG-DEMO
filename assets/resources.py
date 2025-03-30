@@ -25,8 +25,11 @@ def load_font(name, size=2 * globals.WIDTH_UNIT):
     font = pygame.font.Font(full_name, size)
     return font
 
+# Container to handle fonts
 class Font:
     def __init__(self):
+        # Width unit is used to scale the game if you change the resolution
+        # Sets font sizes to use in different sections of the game
         self.gameover_font = load_font("bit5x3.ttf", 10 * globals.WIDTH_UNIT)
         self.credit_font = load_font("bit5x3.ttf", 2 * globals.WIDTH_UNIT)
         self.replay_font = load_font("bit5x3.ttf", 5 * globals.WIDTH_UNIT)
