@@ -83,6 +83,8 @@ class CircuitGrid(pygame.sprite.RenderPlain):
         return self.model.get_node_gate_part(self.selected_wire, self.selected_column)
     
     def handle_input(self, key):
+
+        # Matches the keys
         match (key):
             case pygame.K_a: self.move_to_adjacent_node(MOVE_LEFT),
             case pygame.K_d: self.move_to_adjacent_node(MOVE_RIGHT),

@@ -1,3 +1,5 @@
+# Used by circuit grid file 
+
 EMPTY = -1
 IDEN = 0
 X = 1
