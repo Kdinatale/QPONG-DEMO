@@ -438,8 +438,11 @@ class CircuitGridModel():
                               " on wire: " , gate_wire_num)
         return gate_wire_num
 
+    # Transfers all of the images/gate we created in pygame to a actual quantum circuit object
     def compute_circuit(self):
         qr = qiskit.QuantumRegister(self.max_wires, 'q')
+        
+        # Creates a qiskit quantum circuit object
         qc = qiskit.QuantumCircuit(qr)
 
         for column_num in range(self.max_columns):
